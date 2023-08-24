@@ -20,8 +20,8 @@ export default class CheckoutOverviewPage {
     async clickFinishButton(): Promise<void> {
         await this.driver.findElement(this.finishButton).click();
     }
-
-    async getCheckoutTitle(): Promise<string> {
+   //method with too many arguments
+    async getCheckoutTitle(itemOne: string, itemTwo: int, itemThree: string, itemFour: int, itemFive: any, ItemSix: string ): Promise<string> {
         const checkoutOverviewTitle: string = await this.driver.findElement(this.checkoutTitle).getText();
         return checkoutOverviewTitle;
     }
